@@ -178,10 +178,10 @@ public class Quiz extends AppCompatActivity {
         }
 
         if (correct){
-            Toast.makeText(this, getString(R.string.correct), Toast.LENGTH_SHORT).show();
             mScore++;
+            Toast.makeText(this, getString(R.string.correct) + "\n" + getString(R.string.score) + " " + mScore, Toast.LENGTH_SHORT).show();
         } else {
-            Toast.makeText(this, getString(R.string.incorrect), Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, getString(R.string.incorrect) + "\n" + getString(R.string.score) + " " + mScore, Toast.LENGTH_SHORT).show();
         }
         nextQuestion();
     }
