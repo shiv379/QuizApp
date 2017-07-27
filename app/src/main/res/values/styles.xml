@@ -11,6 +11,7 @@
     <style name="question_root">
         <item name="android:layout_alignParentTop">true</item>
         <item name="android:orientation">vertical</item>
+        <item name="android:padding">16dp</item>
     </style>
 
     <style name="question_text">
@@ -23,8 +24,10 @@
     </style>
 
     <style name="submit_button">
-        <item name="android:layout_alignParentBottom">true</item>
         <item name="android:layout_alignParentEnd">true</item>
+        <item name="android:layout_below">@id/question_root</item>
+        <item name="android:layout_marginEnd">16dp</item>
+        <item name="android:layout_marginBottom">16dp</item>
     </style>
 
     <style name="edit_text">
@@ -32,8 +35,12 @@
         <item name="android:layout_marginStart">16dp</item>
         <item name="android:layout_marginEnd">16dp</item>
         <item name="android:layout_marginBottom">16dp</item>
-        <item name="android:padding">16dp</item>
-        <item name="android:textSize">16dp</item>
+        <item name="android:padding">8dp</item>
+        <item name="android:textSize">16sp</item>
         <item name="android:background">@color/textField</item>
+        <item name="android:drawableLeft">@drawable/edit_icon</item>
+        <item name="android:drawablePadding">8dp</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:inputType">text</item>
     </style>
 </resources>

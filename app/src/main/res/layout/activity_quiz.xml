@@ -1,35 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.example.shiv379.quizapp.Quiz"
-    android:id="@+id/root"
-    android:orientation="vertical">
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/root"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context="com.example.shiv379.quizapp.Quiz">
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/question_root"
-        style="@style/question_root">
+        android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/question_text"
-            style="@style/question_text"
+        <LinearLayout
+            android:id="@+id/question_root"
+            style="@style/question_root"
             android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/question_text"
+                style="@style/question_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="What is your answer?"/>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/button"
+            style="@style/submit_button"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            tools:layout_editor_absoluteX="8dp"
-            tools:layout_editor_absoluteY="0dp"
-            tools:text="What is your answer?"/>
-    </LinearLayout>
+            android:text="@string/submit"
+            />
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/submit"
-        style="@style/submit_button"
-        />
+    </RelativeLayout>
 
-</RelativeLayout>
+</ScrollView>
